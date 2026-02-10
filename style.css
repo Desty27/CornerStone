@@ -7,6 +7,7 @@
   --primary: #B4D03A;         /* accent for dark mode */
   --secondary: #3A54D0;       /* complementary pop */
   --tertiary: #F4F7DC;        /* soft highlight */
+  --brand-dark: #B4D03A;
   --text: #e8ecf2;
   --muted: #a7afc2;
   --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
@@ -100,8 +101,20 @@ nav .wrap {
   animation: logoPulse 3s ease-in-out infinite;
 }
 
+.brand .light-logo { display: none; }
+.light .brand .dark-logo { display: none; }
+.light .brand .light-logo { display: inline-block; }
+
 body.light .brand img {
   filter: brightness(1) saturate(1.2);
+}
+
+.brand-name {
+  color: var(--brand-dark);
+}
+
+.light .brand-name {
+  color: var(--text);
 }
 
 .pill {
